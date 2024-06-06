@@ -1,13 +1,17 @@
 #  PiKVM v4 Plus physical ports 
-ineed you ca build your own PiKVM but in this guide we will be using PiKVM v4 Plus from PiKVM
+You ca build your own PiKVM  but in this guide we will be using PiKVM v4 Plus from PiKVM.
 
 Lets take a look at the PiKVM physical ports
+
 
 
 ## Front
 At the front we have the following ports 
 
-1. usb: used to connect to the and wil acts at a mouse and keybord
+![Alt text](Front.png)
+
+
+1. USB, used to connect to the and wil acts at a mouse and keybord
 2. PiKVM HDMI is the HDMI output of the PiKVM 
 3. HDMI Out i connected to the montor so that PiKVM aces a a man in the middel on the video stream 
 4. ATX is used to controll the power of the computer/server. for this to work  you need to use a RJ45 card and installed in the computer/server in a man i a middle for the power/resett button and the power connections on the motherboard
@@ -16,18 +20,39 @@ At the front we have the following ports
 
 ## Back side
 
+1. 12V Power
+2. USB to the PiKVM 
+3. RJ45 or USB C to 
+4. 5V usb C Power
+5. SD-card for opertating system
+6. Ethernet port for internett access
 
 
-##  More Detiled overciew
+##  More Detiled overview
+where is a more deatail port view for the device
+
+
+## Extra
+
+This part can be connected between the power buttons and motherboard for remote control of the power/rettes buttons.
+this card can be mounten in the with a low or high profile pci mounts on the computer/server 
+
+there is also a spesial vga to hdmi adapter. there my be problems if you get another adapter so be aware.  
+
+
 
 
 # Getting started with PiKVM
 
+Lets connect the PiKVM to power, internett and computer/sever 
+
+
+
 ## Step 1: Accesing the device
 
-Connect the PiKVM to power and ethernet.
+After connection  the PiKVM to power and ethernet.
 
-You can access the via HTTPS or SSH
+You can access the PiKVM via HTTPS or SSH
 
 There are multibel ways to IP address of the PiKVM
 1. look the the display
@@ -35,7 +60,7 @@ There are multibel ways to IP address of the PiKVM
 3. scann the network with a network scanner
 
 
-use the following password
+use the following default passwords
 
 default web username: admin
 default web passord: admin
