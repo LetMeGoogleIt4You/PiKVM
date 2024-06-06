@@ -21,7 +21,7 @@ At the front we have the following ports
 
 
 
-!(Back.png)
+![Back](Back.png)
 
 
 1. 12V Power
@@ -35,7 +35,7 @@ At the front we have the following ports
 ##  More Detiled overview
 Here is a more deatail port view for the device
 
-!(PiKVM connections.jpg)
+![Ports](PiKVM Ports.jpg)
 
 
 ## Extra
@@ -43,19 +43,19 @@ Here is a more deatail port view for the device
 This ATX card can be connected between the power buttons and motherboard for remote control of the power/rettes buttons.
 in comes with two mounts, one low and one high profile so i dont founts inside of the motherborad 
 
-!(ATX cards.jpg)
-!(Mounts.jpg)
+![ATX](ATX cards.jpg)
+![Mounts](Mounts.jpg)
 
 There is also a spesial vga to hdmi adapter. from my reading there my be problems if you get another adapter so be aware.  
 
-!(HDMI adapter.jpg)
+![HDMI](HDMI adapter.jpg)
 
 
 # Getting started with PiKVM
 
 Lets connect the PiKVM to power, internett and computer/sever 
 
-(PiKVM Connection.png)
+![Connections](PiKVM Connection.png)
 
 
 ## Step 1: Accesing the device
