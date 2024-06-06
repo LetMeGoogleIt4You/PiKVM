@@ -36,7 +36,7 @@ At the front we have the following ports
 Here is a more deatail port view for the device
 
 
-![Ports](PiKVM Ports.jpg)
+![Ports](PiKVMPorts.jpg)
 
 
 
@@ -69,13 +69,15 @@ Lets connect the PiKVM to power, internett and computer/sever
 ## Step 1: Accesing the device
 
 The bare minminum you need to connection the PiKVM to power and ethernet.
+remember to  not turn off the device until it's fully booted for the first time.
+
 
 You can access the PiKVM via HTTPS or SSH
 
 There are multibel ways to IP address of the PiKVM
-1. look the the display
-2. look at the arp table on the router
-3. scann the network with a network scanner
+1. You can look the the display on the PiKVM
+2. You look at the mac address table on the switch and find the mac address in the arp table of the router
+3. Yuu can also scann the network with a network scanner to find the device. 
 
 
 Use the following default credentios to access the PiKVM
@@ -91,6 +93,24 @@ default ssh password: root
 
 lets so some basic keeping for the device. 
 
+For enabling write mode
+
+To enable write-mode, run command rw (under root).
+```
+[root@pikvm ~]# rw
+```
+
+
+To disable it, run command ro.
+```
+[root@pikvm ~]# ro
+```
+
+
+If you receive the message "Device is busy", perform reboot
+
+
+
 
 ### Change web portal password
 Log in the web portal and do the
@@ -103,6 +123,27 @@ Change
 
 ### update the device
 
+
+To update, run following commands under the root user:
+```
+[root@pikvm ~]# pikvm-update
+```
+
+If you encounter an error like:
+```
+[root@pikvm ~]# pikvm-update
+bash: pikvm-update: command not found
+It's most likely you have an old OS release. You can update the OS as follows:
+```
+
+```
+[root@pikvm ~]# rw
+[root@pikvm ~]# pacman -Syy
+[root@pikvm ~]# pacman -S pikvm-os-updater
+[root@pikvm ~]# pikvm-update
+```
+
+Next time you will be able to use the usual method with pikvm-update.
 
 ### verify that PiKVM is working as inteded 
 
