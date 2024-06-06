@@ -1,6 +1,5 @@
 #  PiKVM v4 Plus physical ports 
 
-
 Lets start with take a look at the PiKVM physical ports
 
 
@@ -14,11 +13,16 @@ At the front we have the following ports
 1. USB, used to connect to the and wil acts at a mouse and keybord
 2. PiKVM HDMI is the HDMI output of the PiKVM 
 3. HDMI Out i connected to the montor so that PiKVM aces a a man in the middel on the video stream 
-4. ATX is used to controll the power of the computer/server. for this to work  you need to use a RJ45 card and installed in the computer/server in a man i a middle for the power/resett button and the power connections on the motherboard
-5. HDMI port connects to the computer/server hdmi out  so the PiKVM get the video steam form the device. 
+4. ATX is used to controll the power of the computer/server. For this to work you need to use a ATX card and installed in to install it between the power/resett button and the power connections on the motherboard
+5. HDMI port connects to the computer/server hdmi out so the PiKVM get the video steam form the device. 
 
 
 ## Back side
+
+
+
+!(Back.png)
+
 
 1. 12V Power
 2. USB to the PiKVM 
@@ -29,28 +33,34 @@ At the front we have the following ports
 
 
 ##  More Detiled overview
-where is a more deatail port view for the device
+Here is a more deatail port view for the device
+
+!(PiKVM connections.jpg)
 
 
 ## Extra
 
-This part can be connected between the power buttons and motherboard for remote control of the power/rettes buttons.
-this card can be mounten in the with a low or high profile pci mounts on the computer/server 
+This ATX card can be connected between the power buttons and motherboard for remote control of the power/rettes buttons.
+in comes with two mounts, one low and one high profile so i dont founts inside of the motherborad 
 
-there is also a spesial vga to hdmi adapter. there my be problems if you get another adapter so be aware.  
+!(ATX cards.jpg)
+!(Mounts.jpg)
 
+There is also a spesial vga to hdmi adapter. from my reading there my be problems if you get another adapter so be aware.  
 
+!(HDMI adapter.jpg)
 
 
 # Getting started with PiKVM
 
 Lets connect the PiKVM to power, internett and computer/sever 
 
+(PiKVM Connection.png)
 
 
 ## Step 1: Accesing the device
 
-After connection  the PiKVM to power and ethernet.
+The bare minminum you need to connection the PiKVM to power and ethernet.
 
 You can access the PiKVM via HTTPS or SSH
 
