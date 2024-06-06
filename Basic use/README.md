@@ -1,14 +1,14 @@
 #  PiKVM v4 Plus physical ports 
-You ca build your own PiKVM  but in this guide we will be using PiKVM v4 Plus from PiKVM.
 
-Lets take a look at the PiKVM physical ports
+
+Lets start with take a look at the PiKVM physical ports
 
 
 
 ## Front
 At the front we have the following ports 
 
-![Alt text](Front.png)
+!(Front.png)
 
 
 1. USB, used to connect to the and wil acts at a mouse and keybord
