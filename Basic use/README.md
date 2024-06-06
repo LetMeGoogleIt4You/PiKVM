@@ -70,7 +70,7 @@ There are multibel ways to IP address of the PiKVM
 3. scann the network with a network scanner
 
 
-use the following default passwords
+Use the following default credentios to access the PiKVM
 
 default web username: admin
 default web passord: admin
