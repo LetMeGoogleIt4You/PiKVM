@@ -46,7 +46,7 @@ This ATX card can be connected between the power buttons and motherboard for rem
 in comes with two mounts, one low and one high profile so i dont founts inside of the motherborad 
 
 
-![ATX](ATX cards.jpg)
+![ATX](ATXcard.jpg)
 
 
 ![Mounts](Mounts.jpg)
@@ -55,7 +55,7 @@ in comes with two mounts, one low and one high profile so i dont founts inside o
 There is also a spesial vga to hdmi adapter. from my reading there my be problems if you get another adapter so be aware.  
 
 
-![HDMI](HDMI adapter.jpg)
+![HDMI](HDMIadapter.jpg)
 
 
 # Getting started with PiKVM
@@ -63,7 +63,7 @@ There is also a spesial vga to hdmi adapter. from my reading there my be problem
 Lets connect the PiKVM to power, internett and computer/sever 
 
 
-![Connections](PiKVM Connection.png)
+![Connections](PiKVMConnection.png)
 
 
 ## Step 1: Accesing the device
