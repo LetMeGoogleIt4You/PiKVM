@@ -10,17 +10,16 @@ Get basic understanding of PiKVM platfrom and how to use it
 For more information look at this guide
 
 
-## Feature 1:  Tailscale VPN
-We wil be using Tailscale VPN so i can access the PiKVM remotly so long the PiKVM have Internett access it
+## Feature 1:  4G as a backup carrier
+We  want a secondy path to the internett for my PiKVM so we will be using a 4G moden and it will be actived if the ehternet connection goes have access to the internet.
 
-For more information regadring Tailscale VPN look at this guide
-
-
-## Feature 2: 4G as a backup carrier
 We  want a secondy path to the internett for my PiKVM so we will be using a 4G moden and it will be actived if the ehternet connection goes have access to the internet.
 
 
-For more information regadring 4G look at this guide
+## Feature 2: Tailscale VPN 
+We wil be using Tailscale VPN so i can access the PiKVM remotly so long the PiKVM have Internett access it
+
+For more information regadring Tailscale VPN look at this guide
 
 
 

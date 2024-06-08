@@ -377,5 +377,5 @@ Interface: eth0 is up
 Interface: wwan0 is up
 eth0 can reach 1.1.1.1
 Checking that default route is using eth0 as gateway
-Default route is set correctl
+Default route is set correctly
 ```
