@@ -59,10 +59,12 @@ Then start the servcies:
 
 ```
 sudo systemctl start NetworkManager
+sudo systemctl enable NetworkManager
 sudo systemctl status NetworkManager
 
 
 sudo systemctl start ModemManager
+sudo systemctl enable ModemManager
 sudo systemctl status ModemManager
 ```
 

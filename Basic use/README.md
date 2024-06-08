@@ -136,12 +136,14 @@ If you require additional user for the Web UI access, use the following:
 ```
 [root@pikvm ~]# kvmd-htpasswd set <user> # Set a new user with password or change of an existing one
 [root@pikvm ~]# kvmd-htpasswd del <user> # Remove/delete a user
-```The 
+```
+
 
 ### 2.3 update the device
 
 
 To update, run following commands under the root user:
+
 ```
 [root@pikvm ~]# pikvm-update
 ```
