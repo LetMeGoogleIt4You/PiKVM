@@ -112,16 +112,33 @@ If you receive the message "Device is busy", perform reboot
 
 
 
-### Change web portal password
-Log in the web portal and do the
+### Step 2.1 Change root password
+
+When loggined to ssh and in wr mode use the following command
 
 
-### Change web portal password
+```
+[root@pikvm ~]# passwd root
+```
 
-Change 
+
+### Step 2.2  Change web portal password
 
 
-### update the device
+When loggined to ssh and in wr mode use the following command
+
+```
+[root@pikvm ~]# kvmd-htpasswd set admin
+```
+
+If you require additional user for the Web UI access, use the following:
+
+```
+[root@pikvm ~]# kvmd-htpasswd set <user> # Set a new user with password or change of an existing one
+[root@pikvm ~]# kvmd-htpasswd del <user> # Remove/delete a user
+```The 
+
+### 2.3 update the device
 
 
 To update, run following commands under the root user:
@@ -130,11 +147,13 @@ To update, run following commands under the root user:
 ```
 
 If you encounter an error like:
+
 ```
 [root@pikvm ~]# pikvm-update
 bash: pikvm-update: command not found
-It's most likely you have an old OS release. You can update the OS as follows:
 ```
+
+It's most likely you have an old OS release. You can update the OS as follows:
 
 ```
 [root@pikvm ~]# rw
@@ -145,7 +164,11 @@ It's most likely you have an old OS release. You can update the OS as follows:
 
 Next time you will be able to use the usual method with pikvm-update.
 
-### verify that PiKVM is working as inteded 
+### 2.4 Verify that PiKVM is working as inteded 
 
+
+Connecet the PiKVM to a computer/server and check that everthing is working normaly. 
+
+see this link for more built in featuers
 
 
