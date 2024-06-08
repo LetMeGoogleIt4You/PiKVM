@@ -29,9 +29,8 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 001 Device 002: ID 2109:3431 VIA Labs, Inc. Hub
 Bus 001 Device 003: ID 2c7c:0125 Quectel Wireless Solutions Co., Ltd. EC25 LTE modem
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-```
 
-```
+
 [root@pikvm ~]# lspci -nn
 00:00.0 PCI bridge [0604]: Broadcom Inc. and subsidiaries BCM2711 PCIe Bridge [14e4:2711] (rev 20)
 01:00.0 USB controller [0c03]: VIA Technologies, Inc. VL805/806 xHCI USB 3.0 Controller [1106:3483] (rev 01)
@@ -62,6 +61,7 @@ Then start the servcies:
 sudo systemctl start NetworkManager
 sudo systemctl status NetworkManager
 
+
 sudo systemctl start ModemManager
 sudo systemctl status ModemManager
 ```
@@ -72,9 +72,8 @@ Verify that the modem is operating in modem mode and the modem is up and running
 ```
 [root@pikvm ~]# mmcli -L
     /org/freedesktop/ModemManager1/Modem/0 [QUALCOMM INCORPORATED] QUECTEL Mobile Broadband Module
-```
 
-```
+
 [root@pikvm ~]# mmcli -m 0
   -----------------------------------
   General  |                    path: /org/freedesktop/ModemManager1/Modem/0
@@ -196,7 +195,14 @@ I set this script run once every 5th minuts using cronie.
 
 Make the script
 
-Add the following code
+
+```
+sudo nano /usr/local/bin/check_connection.sh
+
+```
+
+
+Add the following code to the script
 
 ```
 #!/bin/bash
@@ -314,28 +320,62 @@ Run the script manully
 sudo /usr/local/bin/check_connection.sh
 ```
 
-Now we up to run every 5th minnuts. 
-
-Isntall cronie
+Now that the script is working,  we set it  up to run every 5th minnuts. 
+To do that we to install cronie and start it
 
 ```
 sudo pacman -S cronie
+
+
 sudo systemctl enable cronie
 sudo systemctl start cronie
 ```
 
+to make a job run the following command
+
+sudo systemctl status cronie
+
 ```
-sudo crontab -e
+echo "*/5 * * * * /usr/local/bin/check_connection.sh >> /var/log/check_connection.log 2>&1" | sudo crontab -
+
 ```
 
-add the following line
+Add the following line 
 
 ```
 */5 * * * * /usr/local/bin/check_connection.sh >> /var/log/check_connection.log 2>&1
 ```
 
-Verify by checking the log file
+Verify by checking the status and the log file
 
 ```
-cat /var/log/check_connection.log
+[root@pikvm ~]# sudo systemctl status cronie
+* cronie.service - Command Scheduler
+     Loaded: loaded (/usr/lib/systemd/system/cronie.service; enabled; preset: disabled)
+     Active: active (running) since Sat 2024-06-08 12:55:13 UTC; 6min ago
+   Main PID: 9634 (crond)
+      Tasks: 2 (limit: 4018)
+        CPU: 201ms
+     CGroup: /system.slice/cronie.service
+             |- 9634 /usr/sbin/crond -n
+             `-10383 /usr/sbin/anacron -s
+
+Jun 08 13:00:00 pikvm CROND[10231]: (root) CMD (/usr/local/bin/check_connection.sh >> /var/log/check_connection.log 2>&1)
+Jun 08 13:00:04 pikvm CROND[10225]: (root) CMDEND (/usr/local/bin/check_connection.sh >> /var/log/check_connection.log 2>&1)
+Jun 08 13:00:04 pikvm CROND[10225]: pam_unix(crond:session): session closed for user root
+Jun 08 13:01:00 pikvm CROND[10377]: (root) CMD (run-parts /etc/cron.hourly)
+Jun 08 13:01:00 pikvm anacron[10383]: Anacron started on 2024-06-08
+Jun 08 13:01:00 pikvm CROND[10376]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jun 08 13:01:00 pikvm anacron[10383]: Will run job `cron.daily' in 32 min.
+Jun 08 13:01:00 pikvm anacron[10383]: Will run job `cron.weekly' in 52 min.
+Jun 08 13:01:00 pikvm anacron[10383]: Will run job `cron.monthly' in 72 min.
+Jun 08 13:01:00 pikvm anacron[10383]: Jobs will be executed sequentially
+
+
+[root@pikvm ~]# cat /var/log/check_connection.log
+Interface: eth0 is up
+Interface: wwan0 is up
+eth0 can reach 1.1.1.1
+Checking that default route is using eth0 as gateway
+Default route is set correctl
 ```
