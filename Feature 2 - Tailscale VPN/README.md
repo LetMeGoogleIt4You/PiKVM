@@ -1,46 +1,41 @@
+
 # Feature 2 - Tailscale VPN
 
-To access your PiKVM for anywhere you can use Tailscale VPN.
+To access your PiKVM from anywhere, you can use Tailscale VPN.
 
-
-With Tailscale you dont need nat, portforwaring etc... 
-
+With Tailscale, you don't need NAT, port forwarding, etc.
 
 ![Connections](TailscaleDiagram.png)
 
+Here is a copy of the Tailscale guide.
 
+Enable read-write mode:
 
-
-Here is a copy of Tailscale guide
-
-Enable read-write mode.
-```
+```sh
 rw
 ```
 
+Install the tailscale-pikvm package:
 
-Install the tailscale-pikvm package.
-
-```
+```sh
 [root@pikvm ~]# pacman -Sy tailscale-pikvm
 ```
 
-Enable and start the Tailscale service.
+Enable and start the Tailscale service:
 
-```
+```sh
 [root@pikvm ~]# systemctl enable --now tailscaled
 Created symlink /etc/systemd/system/multi-user.target.wants/tailscaled.service -> /usr/lib/systemd/system/tailscaled.service.
 ```
 
-Log in to Tailscale using the link provided by the command
+Log in to Tailscale using the link provided by the command:
 
-```
+```sh
 [root@pikvm ~]# tailscale up
 
 To authenticate, visit:
 
-        https://login.tailscale.com/a/a6b12<snip>>1f80c
-
+        https://login.tailscale.com/a/a6b12<snip>1f80c
 
 To approve your machine, visit (as admin):
 
@@ -50,16 +45,15 @@ Success.
 Some peers are advertising routes but --accept-routes is false
 ```
 
-Enable SSH
+Enable SSH:
 
-```
+```sh
 [root@pikvm ~]# tailscale set --ssh
 ```
 
-Verify that you have a address an test from another device connected to the tailscale network
+Verify that you have an address and test from another device connected to the Tailscale network:
 
-
-```
+```sh
 [root@pikvm ~]# ip add
 <snip>
 5: tailscale0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN group default qlen 500
@@ -71,4 +65,3 @@ Verify that you have a address an test from another device connected to the tail
     inet6 <snip> scope link stable-privacy proto kernel_ll 
        valid_lft forever preferred_lft forever
 ```
-    
