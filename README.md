@@ -11,7 +11,7 @@ Get a basic understanding of the PiKVM platform and how to use it.
 
 For more information, look at this guide.
 
-Basic [Link](/Basic use/README.md)
+Basic [Link](/Basic%20use/README.md)
 
 
 ## Feature 1: 4G as a Backup Carrier
