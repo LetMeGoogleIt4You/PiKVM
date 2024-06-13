@@ -11,6 +11,9 @@ Get a basic understanding of the PiKVM platform and how to use it.
 
 For more information, look at this guide.
 
+Basic [Link](/Basic use/README.md)
+
+
 ## Feature 1: 4G as a Backup Carrier
 We want a secondary path to the internet for my PiKVM, so we will be using a 4G modem. It will be activated if the ethernet connection loses access to the internet.
 
