@@ -2,7 +2,13 @@
 
 To access your PiKVM for anywhere you can use Tailscale VPN.
 
+
 With Tailscale you dont need nat, portforwaring etc... 
+
+
+![Connections](TailscaleDiagram.png)
+
+
 
 
 Here is a copy of Tailscale guide

@@ -3,14 +3,15 @@
 To be clear I am not a linux user or linux admin, this was leaning full event with a lot of trail and error. 
 Thanks two chatgpt and alot of googling I got it working. 
 
+![Connections](4Gdiagram.png)
 
 
 ## Installstion
 
 What you need:
 
-1. one simcard without a pin code
-2. one modem
+1. a imcard without a pin code
+2. a modem (I want for this one PIS-2004 - Quectel EG25-G   [Link](https://www.elfadistrelec.no/en/quectel-eg25-mini-pcie-lte-module-with-antennas-nebra-pis-2004/p/30221005) )
 3. two antanns 
 
 ## Setup

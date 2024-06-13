@@ -1,95 +1,75 @@
-#  PiKVM v4 Plus physical ports 
+# PiKVM v4 Plus Physical Ports
 
-Lets start with take a look at the PiKVM physical ports
-
-
+Let's start by looking at the physical ports of the PiKVM.
 
 ## Front
-At the front we have the following ports 
+At the front, we have the following ports:
 
 ![Front](Front.png)
 
+1. **USB**: Used to connect to the device and acts as a mouse and keyboard.
+2. **PiKVM HDMI**: This is the HDMI output of the PiKVM.
+3. **HDMI Out**: Connected to the monitor so that PiKVM acts as a man-in-the-middle on the video stream.
+4. **ATX**: Used to control the power of the computer/server. For this to work, you need to use an ATX card and install it between the power/reset button and the power connections on the motherboard.
+5. **HDMI Port**: Connects to the computer/server HDMI out so the PiKVM gets the video stream from the device.
 
-1. USB, used to connect to the and wil acts at a mouse and keybord
-2. PiKVM HDMI is the HDMI output of the PiKVM 
-3. HDMI Out i connected to the montor so that PiKVM aces a a man in the middel on the video stream 
-4. ATX is used to controll the power of the computer/server. For this to work you need to use a ATX card and installed in to install it between the power/resett button and the power connections on the motherboard
-5. HDMI port connects to the computer/server hdmi out so the PiKVM get the video steam form the device. 
-
-
-## Back side
-
-
+## Back Side
 
 ![Back](Back.png)
 
+1. **12V Power**
+2. **USB to the PiKVM**
+3. **RJ45 or USB C**
+4. **5V USB C Power**
+5. **SD-card for operating system**
+6. **Ethernet port for internet access**
 
-1. 12V Power
-2. USB to the PiKVM 
-3. RJ45 or USB C to 
-4. 5V usb C Power
-5. SD-card for opertating system
-6. Ethernet port for internett access
-
-
-##  More Detiled overview
-Here is a more deatail port view for the device
-
+## More Detailed Overview
+Here is a more detailed port view for the device:
 
 ![Ports](PiKVMPorts.jpg)
 
-
-
 ## Extra
 
-This ATX card can be connected between the power buttons and motherboard for remote control of the power/rettes buttons.
-in comes with two mounts, one low and one high profile so i dont founts inside of the motherborad 
-
+This ATX card can be connected between the power buttons and motherboard for remote control of the power/reset buttons. It comes with two mounts, one low and one high profile, so it fits inside the motherboard.
 
 ![ATX](ATXcard.jpg)
 
-
 ![Mounts](Mounts.jpg)
 
-
-There is also a spesial vga to hdmi adapter. from my reading there my be problems if you get another adapter so be aware.  
-
+There is also a special VGA to HDMI adapter. From my reading, there may be problems if you use another adapter, so be aware.
 
 ![HDMI](HDMIadapter.jpg)
 
+# Getting Started with PiKVM
 
-# Getting started with PiKVM
-
-Lets connect the PiKVM to power, internett and computer/sever 
-
+Let's connect the PiKVM to power, internet, and computer/server.
 
 ![Connections](PiKVMConnection.png)
 
+## Step 1: Accessing the Device
 
-## Step 1: Accesing the device
+The bare minimum you need is to connect the PiKVM to power and ethernet.
+Remember not to turn off the device until it's fully booted for the first time.
 
-The bare minminum you need to connection the PiKVM to power and ethernet.
-remember to  not turn off the device until it's fully booted for the first time.
+You can access the PiKVM via HTTPS or SSH.
 
+There are multiple ways to find the IP address of the PiKVM:
+1. You can look at the display on the PiKVM.
+2. You can look at the MAC address table on the switch and find the MAC address in the ARP table of the router.
+3. You can also scan the network with a network scanner to find the device.
 
-You can access the PiKVM via HTTPS or SSH
+Use the following default credentials to access the PiKVM:
 
-There are multibel ways to IP address of the PiKVM
-1. You can look the the display on the PiKVM
-2. You look at the mac address table on the switch and find the mac address in the arp table of the router
-3. Yuu can also scann the network with a network scanner to find the device. 
+- Web login: 
+  - **Username**: admin
+  - **Password**: admin
 
+- SSH login: 
+  - **Username**: root
+  - **Password**: root
 
-Use the following default credentios to access the PiKVM
-
-default web username: admin
-default web passord: admin
-
-default ssh username: root
-default ssh password: root
-
-
-## Step 2: House keeping
+## Step 2: Housekeeping
 
 lets so some basic keeping for the device. 
 

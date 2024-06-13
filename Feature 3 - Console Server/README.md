@@ -3,10 +3,15 @@
 
 Since I have alot devices(cisco netowrking devices) at using console i want the PiKVM to also act as a console server
 
+![Connections](ConsoleDiagram.png)
 
-You need will a Serial Adapter, I went for this one. 
+
+You need will a Serial Adapter (I want for this one Gearmo 4 Port USB to Serial RS232 Adapter  [Link] (https://www.amazon.com/dp/B004ETDC8K?ref_=pe_386300_442618370_TE_sc_as_ri_0) ) 
 
 It has one usb to four Serial conncection. 
+
+![Connections](ConsoleCabel.jpg)
+
 
 SSH to the PiKVM
 Enable read-write mode.
@@ -63,8 +68,38 @@ connection: &con01
               9600n81,local
 
 
+connection: &con02
+    accepter: telnet,tcp,2002
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/ttyUSB5,
+              9600n81,local
 
 
+connection: &con03
+    accepter: telnet,tcp,2003
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/ttyUSB6,
+              9600n81,local
+
+
+connection: &con04
+    accepter: telnet,tcp,2004
+    enable: on
+    options:
+      kickolduser: true
+      telnet-brk-on-sync: true
+    connector: serialdev,
+              /dev/ttyUSB7,
+              9600n81,local
+              
 ```
 
 Restart the ser2net service
@@ -107,3 +142,6 @@ To exit the telnet session use  "ctrl" + "]" and type "quit"
 Be warned: If you are on non-english keyboard you may have a problem with the "ctrl" + "]"
 
 for me i had to use "ctrl" + "¨" (two kyes right for the "P" key)
+
+
+https://superuser.com/questions/486496/how-do-i-exit-telnet
