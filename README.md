@@ -33,6 +33,9 @@ For more information regarding Tailscale VPN, look at this guide.
 Since I have a lot of routers and switches, I needed a way to access them remotely. This is how I set them up.
 
 
+[Link](/Feature%203%20-%20Console%20Server/README.md)
+
+
 ## Feature 4: PiKVM at Scale
 I wanted a PiKVM to manage more than one computer.
 
