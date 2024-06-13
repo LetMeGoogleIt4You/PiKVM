@@ -1,35 +1,29 @@
 # PiKVM v4 Plus
 
-Hi and welcome to my little PiKVM prosject. 
+Hi and welcome to my little PiKVM project.
 
-Goal is to set up a flexibel OOB mgmt for my devices in my home lab.
+The goal is to set up a flexible OOB management for my devices in my home lab.
 
-## Main goal:
-Get basic understanding of PiKVM platfrom and how to use it
+![Connections](PiKVMDevices.png)
 
-For more information look at this guide
+## Main Goal:
+Get a basic understanding of the PiKVM platform and how to use it.
 
+For more information, look at this guide.
 
-## Feature 1:  4G as a backup carrier
-We  want a secondy path to the internett for my PiKVM so we will be using a 4G moden and it will be actived if the ehternet connection goes have access to the internet.
-
-We  want a secondy path to the internett for my PiKVM so we will be using a 4G moden and it will be actived if the ehternet connection goes have access to the internet.
-
+## Feature 1: 4G as a Backup Carrier
+We want a secondary path to the internet for my PiKVM, so we will be using a 4G modem. It will be activated if the ethernet connection loses access to the internet.
 
 ## Feature 2: Tailscale VPN 
-We wil be using Tailscale VPN so i can access the PiKVM remotly so long the PiKVM have Internett access it
+We will be using Tailscale VPN so I can access the PiKVM remotely. As long as the PiKVM has internet access, it will be accessible.
 
-For more information regadring Tailscale VPN look at this guide
+For more information regarding Tailscale VPN, look at this guide.
+
+## Feature 3: OOB Management of Serial Devices 
+Since I have a lot of routers and switches, I needed a way to access them remotely. This is how I set them up.
 
 
+## Feature 4: PiKVM at Scale
+I wanted a PiKVM to manage more than one computer.
 
-##  Feature 3: OOB Mgmt of Serial devices 
-Since a have alot of routers and switches a needed a way to access them remotly. this is how i set them up. 
-
-(guid in progress)
-
-##  Feature 4: PiKVM at scale
-I wantet a PiKVM to manage more then one compurer.
-
-(guid in progress)
-
+(guide in progress)

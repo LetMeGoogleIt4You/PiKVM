@@ -5,8 +5,8 @@ Since I have alot devices(cisco netowrking devices) at using console i want the 
 
 ![Connections](ConsoleDiagram.png)
 
-
-You need will a Serial Adapter (I want for this one Gearmo 4 Port USB to Serial RS232 Adapter  [Link] (https://www.amazon.com/dp/B004ETDC8K?ref_=pe_386300_442618370_TE_sc_as_ri_0) ) 
+  
+You need will a Serial Adapter I want for this one Gearmo 4 Port USB to Serial RS232 Adapter  [Link](https://www.amazon.com/dp/B004ETDC8K?ref_=pe_386300_442618370_TE_sc_as_ri_0)
 
 It has one usb to four Serial conncection. 
 
@@ -144,4 +144,6 @@ Be warned: If you are on non-english keyboard you may have a problem with the "c
 for me i had to use "ctrl" + "¨" (two kyes right for the "P" key)
 
 
+refreance:
 https://superuser.com/questions/486496/how-do-i-exit-telnet
+
